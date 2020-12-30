@@ -11,3 +11,5 @@
 * every
 * some
 * deepClone
+
+## 原型
