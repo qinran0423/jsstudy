@@ -30,7 +30,7 @@
 
 function test() {
   'use strict';
-  return this
+  return this  
 }
 
 
