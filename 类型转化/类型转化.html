@@ -1,16 +1,33 @@
 <script>
+// let obj = {
+//   valueOf() {
+//     return 'x'
+//   },
+//   toString() {
+//     return {}
+//   }
+// }
+
+// console.log(String(obj));
+
+
+
 let obj = {
   valueOf() {
-    return 'x'
-  },
-  toString() {
-    return {}
+    return 1
   }
 }
 
-console.log(String(obj));
+
+// console.log(obj == 1); // true
 
 
+console.log(obj + 1);
+
+
+console.log(2 + undefined);
+
+console.log(2 + null);
 
 
 </script>
