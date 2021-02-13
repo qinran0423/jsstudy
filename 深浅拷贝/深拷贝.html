@@ -1,0 +1,81 @@
+<script>
+  //  JSON.stringify
+  // let obj1 = { 
+  //   a: 1,
+  //   b: [1,2,3]
+  // }
+
+  // let str = JSON.stringify(obj1)
+  // let obj2 = JSON.parse(str)
+
+  // console.log(obj2);
+
+
+  // obj1.a = 2
+  // obj1.b.push(4)
+  // console.log(obj1);
+  // console.log(obj2);
+
+
+  // function Obj() {
+
+  //   this.func = function () { alert(1) }; // 消失
+
+  //   this.obj = { a: 1 };
+
+  //   this.arr = [1, 2, 3];
+
+  //   this.und = undefined; // 消失
+
+  //   this.reg = /123/; // RegExp 引用类型会变成空对象；
+
+  //   this.date = new Date(0); // 字符串
+
+  //   this.NaN = NaN; //  NaN、Infinity 以及 -Infinity，JSON 序列化的结果会变成 null；
+
+  //   this.infinity = Infinity;
+
+  //   this.sym = Symbol(1); // 消失
+
+  // }
+
+  // let obj1 = new Obj();
+
+  // Object.defineProperty(obj1, 'innumerable', {
+
+  //   enumerable: false,
+
+  //   value: 'innumerable' // 无法拷贝不可枚举的属性
+
+  // });
+
+  // console.log('obj1', obj1);
+
+  // let str = JSON.stringify(obj1);
+
+  // let obj2 = JSON.parse(str);
+
+  // console.log('obj2', obj2);
+
+
+
+  let obj =  {
+    a: 1
+  }
+
+  let obj2 = Object.create(obj, {
+    b:{
+      writable:true,
+      configurable:true,
+      value: 2
+    }
+  })
+
+
+  obj.a = 3
+  console.log(obj2);
+  console.log(Object.getOwnPropertyDescriptors(obj2));
+
+
+
+</script>

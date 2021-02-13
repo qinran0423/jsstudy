@@ -1,0 +1,70 @@
+<script>
+// 实现浅拷贝
+// 方法一 object.assign
+// let target = {}
+// let source = {a: {b: 2}}
+
+// Object.assign(target,source)
+
+// console.log(target);
+
+// source.a.b = 10
+
+// console.log(source);
+// console.log(target);
+
+
+
+// const obj = Object.create({foo: 1}, { // foo 是个继承属性。
+//     bar: {
+//         value: 2  // bar 是个不可枚举属性。
+//     },
+//     baz: {
+//         value: 3,
+//         enumerable: true  // baz 是个自身可枚举属性。
+//     }
+// });
+
+// const copy = Object.assign({}, obj);
+// console.log(copy); // { baz: 3 }
+
+// 方法二： 拓展运算符
+// let obj = {
+//   a: 1,
+//   b: {
+//     c: 1
+//   }
+// }
+
+// let obj2 = {...obj}
+// obj.a = 2
+// console.log(obj);
+// console.log(obj2);
+
+// obj.b.c = 2
+
+// console.log(obj);
+// console.log(obj2);
+
+// let arr = [1,2,3, {a: 1}]
+// let newArr = [...arr]
+
+// arr[0] = 4
+// arr[3].a = 4
+// console.log(arr, newArr);
+
+//方法三  concat
+// let arr = [1, 2, 3, {a: 1}];
+// let newArr = arr.concat();
+// newArr[1] = 100;
+// newArr[3].a = 0
+// console.log(arr);  // [ 1, 2, 3 ]
+// console.log(newArr); // [ 1, 100, 3 ]
+//
+
+// 方法四 slice
+// let arr = [1, 2, {val: 4}];
+// let newArr = arr.slice();
+// newArr[2].val = 1000;
+// console.log(arr);  //[ 1, 2, { val: 1000 } ]
+</script>
