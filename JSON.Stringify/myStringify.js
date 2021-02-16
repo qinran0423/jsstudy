@@ -43,12 +43,7 @@ function jsonStringify(data) {
         }
       })
 
-      console.log(result);
-
       return "{" +result + "}"
     }
   }
 }
-
-
-console.log(jsonStringify({a: 1, b: 2}));

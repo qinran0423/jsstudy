@@ -1,0 +1,38 @@
+<script>
+
+// 构造方法
+
+console.log(Array.of(8.0));
+
+// 判断数组
+var a = []
+
+// instanceof
+console.log(a instanceof Array); // true
+// constructor
+console.log(a.constructor ===Array); // true
+// Object.prototype.isPrototypeOf()
+console.log(Array.prototype.isPrototypeOf(a)); // true
+// getPrototypeOf
+console.log(Object.getPrototypeOf(a) === Array.prototype ); // true
+// Object.prototype.toString
+console.log(Object.prototype.toString.call(a) === '[object Array]'); // true
+
+
+if (!Array.isArray){
+  Array.isArray = function(arg){
+    return Object.prototype.toString.call(arg) === '[object Array]';
+  };
+}
+
+
+
+function foo() {
+    bar(this, arguments);
+}
+function bar(a, b, c) {
+   console.log(a, b, c);
+}
+foo(1, 2, 3)   //1 2 3
+
+</script>
