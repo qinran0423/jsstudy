@@ -29,26 +29,88 @@
 
 <script>
 
-// function Test(c,d) {
+// function Test(c) {
 //   console.log(this);
-//   return {
-//     c,
-//     d
-//   }
 // }
 
 
-// const res =  Test.call({
+// const res =  Test.myApply({
 //   a: 1,
 //   b: 2
-// },3,4)
+// },[1,2])
 
-// console.log(res);
 // const test = myNew(Test, 1,2)
 // console.log(test);
 
 
 // const test1 = new Test(1,2)
 // console.log(test1);
+
+/*
+  bind
+  1. test-> bind() -> test不执行 -> 返回一个新的函数
+  2. bind -> 第一个参数 -test -> this -> {a: 1, b: 2}
+  3. bind可以分离test的参数
+      bind接收一部分参数  返回的新函数接收一部分参数
+  4. bind&call的函数参数传递是一样的
+  5. 实例化返回的新函数 -> this 指向是test构造出来的实例
+  6. 实例应该继承test构造函数上的原型属性
+*/
+
+
+// function test(user, car) {
+//   this.c = 'c'
+//   console.log(this, arguments);
+// }
+
+// test.prototype.myLove = '李四'
+
+// const t =  test.myBind({
+//   a: 1,
+//   b: 2
+// }, '张三')
+
+// // t('奔驰')
+
+// const newTest = new t('奔驰')
+
+// console.log(newTest);
+function test1(user, car) {
+  console.log(user + '刚买了一辆' + car + '车');
+  console.log(this, arguments);
+}
+
+function test2(user, car) {
+  console.log(user + '刚买了一辆' + car + '车');
+  console.log(this, arguments);
+}
+
+test1.prototype.myLove = '李四'
+test2.prototype.myLove = '李四'
+
+const t1 =  test1.bind({
+  a: 1,
+  b: 2
+}, '张三')
+const t2 =  test2.bind({
+  a: 1,
+  b: 2
+}, '张三')
+const t3 =  test1.myBind({
+  a: 1,
+  b: 2
+}, '张三')
+const t4 =  test2.myBind({
+  a: 1,
+  b: 2
+}, '张三')
+
+const newT1 = new t1('奔驰')
+const newT2 = new t2('奔驰')
+const newT3 = new t3('奔驰')
+const newT4 = new t4('奔驰')
+
+console.log(newT3, newT4, t3.prototype.myLove);
+console.log(newT1, newT2, t1.prototype.myLove);
 
 </script>
