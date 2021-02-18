@@ -28,31 +28,34 @@
 
 
 
-console.log(({} + {}).length); // 30
-console.log({}.toString());
-/*
-  {}.toString =>  [object Object]
-  [object Object] + [object Object] => [object Object][object Object]
-*/
+// console.log(({} + {}).length); // 30
+// console.log({}.toString());
+// /*
+//   {}.toString =>  [object Object]
+//   [object Object] + [object Object] => [object Object][object Object]
+// */
 
 
 
 
-console.log(([] + []).length); // 0
-console.log([1,2,3].toString()); // 1,2,3
-/*
-  [].toString = ''
- */
+// console.log(([] + []).length); // 0
+// console.log([1,2,3].toString()); // 1,2,3
+// /*
+//   [].toString = ''
+//  */
 
 
 
  
-console.log((function(...args){}).length); // 0
+// console.log((function(...args){}).length); // 0
 
 
-function test1(...args){}
+// function test1(...args){}
 
 
-test1(1,2,3)
+// test1(1,2,3)
 
-console.log(test1.length); // 0
+// console.log(test1.length); // 0
+
+
+

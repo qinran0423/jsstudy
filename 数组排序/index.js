@@ -68,16 +68,16 @@ let a = [1,4,3,2,5]
 
 
 //  插入排序
-function insertSort(arr) {
-  for(let i = 1; i< arr.length; i++) {
-    for(let j = i; j > 0 && a[j] < a[j -1]; j--) {
-      // [a[j], a[j-1]] = [a[j-1], a[j]]
-      let _temp = a[j -1]
-      a[j-1] = a[j]
-      a[j] = _temp
-    }
-  }
-  return arr
-}
+// function insertSort(arr) {
+//   for(let i = 1; i< arr.length; i++) {
+//     for(let j = i; j > 0 && a[j] < a[j -1]; j--) {
+//       // [a[j], a[j-1]] = [a[j-1], a[j]]
+//       let _temp = a[j -1]
+//       a[j-1] = a[j]
+//       a[j] = _temp
+//     }
+//   }
+//   return arr
+// }
 
-console.log(insertSort(a));
+// console.log(insertSort(a));

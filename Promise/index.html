@@ -1,0 +1,15 @@
+<script>
+
+  let promise = new Promise((resolve, reject) => {
+    // reject('errors')
+    throw new Error('Error')
+  })
+
+  promise.then((value) => {
+    console.log(value);
+  }, (reason) => {
+    console.log(reason);
+  })
+
+
+</script>
