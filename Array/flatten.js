@@ -40,11 +40,24 @@ let a = [1,[2,[3,4,5]]]
 // }
 
 
-function flatten(arr) {
-  let str = JSON.stringify(arr);
-  str = str.replace(/(\[|\])/g, '');
-  str = '[' + str + ']';
-  return JSON.parse(str); 
-}
+// function flatten(arr) {
+//   let str = JSON.stringify(arr);
+//   str = str.replace(/(\[|\])/g, '');
+//   str = '[' + str + ']';
+//   return JSON.parse(str); 
+// }
 
-console.log(flatten(a));
+// console.log(flatten(a));
+
+
+
+
+let a = [11,2,11,4,2,4,5]
+
+
+let arr = []
+
+
+function declare(a) {
+  arr.filter()
+}
