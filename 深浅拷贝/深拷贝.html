@@ -59,23 +59,25 @@
 
 
 
-  let obj =  {
-    a: 1
-  }
+  // let obj =  {
+  //   a: 1
+  // }
 
-  let obj2 = Object.create(obj, {
-    b:{
-      writable:true,
-      configurable:true,
-      value: 2
-    }
-  })
+  // let obj2 = Object.create(obj, {
+  //   b:{
+  //     writable:true,
+  //     configurable:true,
+  //     value: 2
+  //   }
+  // })
 
 
-  obj.a = 3
-  console.log(obj2);
-  console.log(Object.getOwnPropertyDescriptors(obj2));
+  // obj.a = 3
+  // console.log(obj2);
+  // console.log(Object.getOwnPropertyDescriptors(obj2));
 
 
 
 </script>
+
+<script src="./deepclone.js"></script>
