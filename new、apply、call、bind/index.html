@@ -25,7 +25,7 @@
 </script>
 
 
-<script src="./utils.js"></script>
+<script src="./test.js"></script>
 
 <script>
 
@@ -75,42 +75,42 @@
 // const newTest = new t('奔驰')
 
 // console.log(newTest);
-function test1(user, car) {
-  console.log(user + '刚买了一辆' + car + '车');
-  console.log(this, arguments);
-}
+// function test1(user, car) {
+//   console.log(user + '刚买了一辆' + car + '车');
+//   console.log(this, arguments);
+// }
 
-function test2(user, car) {
-  console.log(user + '刚买了一辆' + car + '车');
-  console.log(this, arguments);
-}
+// function test2(user, car) {
+//   console.log(user + '刚买了一辆' + car + '车');
+//   console.log(this, arguments);
+// }
 
-test1.prototype.myLove = '李四'
-test2.prototype.myLove = '李四'
+// test1.prototype.myLove = '李四'
+// test2.prototype.myLove = '李四'
 
-const t1 =  test1.bind({
-  a: 1,
-  b: 2
-}, '张三')
-const t2 =  test2.bind({
-  a: 1,
-  b: 2
-}, '张三')
-const t3 =  test1.myBind({
-  a: 1,
-  b: 2
-}, '张三')
-const t4 =  test2.myBind({
-  a: 1,
-  b: 2
-}, '张三')
+// const t1 =  test1.bind({
+//   a: 1,
+//   b: 2
+// }, '张三')
+// const t2 =  test2.bind({
+//   a: 1,
+//   b: 2
+// }, '张三')
+// const t3 =  test1.myBind({
+//   a: 1,
+//   b: 2
+// }, '张三')
+// const t4 =  test2.myBind({
+//   a: 1,
+//   b: 2
+// }, '张三')
 
-const newT1 = new t1('奔驰')
-const newT2 = new t2('奔驰')
-const newT3 = new t3('奔驰')
-const newT4 = new t4('奔驰')
+// const newT1 = new t1('奔驰')
+// const newT2 = new t2('奔驰')
+// const newT3 = new t3('奔驰')
+// const newT4 = new t4('奔驰')
 
-console.log(newT3, newT4, t3.prototype.myLove);
-console.log(newT1, newT2, t1.prototype.myLove);
+// console.log(newT3, newT4, t3.prototype.myLove);
+// console.log(newT1, newT2, t1.prototype.myLove);
 
 </script>
