@@ -31,7 +31,6 @@ const deepClone = function (obj) {
 
   //继承原型链
 
-
   for (let key of Reflect.ownKeys(obj)) { 
 
     cloneObj[key] = (isComplexDataType(obj[key]) && typeof obj[key] !== 'function') ? deepClone(obj[key]) : obj[key]

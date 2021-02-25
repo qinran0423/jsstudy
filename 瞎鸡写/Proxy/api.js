@@ -1,4 +1,6 @@
-const myTarget = {}
+const myTarget = {
+  a: 1
+}
 
 const proxy = new Proxy(myTarget, {
   get(target, property, receiver) {
@@ -20,8 +22,10 @@ const proxy = new Proxy(myTarget, {
 })
 
 
-proxy.foo // get
-proxy.foo = 'bar' // set
-'foo' in proxy // has
-delete proxy.foo  // deleteProperty
+// proxy.foo // get
+// proxy.foo = 'bar' // set
+// 'foo' in proxy // has
+// delete proxy.foo  // deleteProperty
 
+proxy.a = 2
+console.log(myTarget);

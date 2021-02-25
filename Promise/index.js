@@ -1,22 +1,22 @@
-const MyPromise = require('./promise')
+// const MyPromise = require('./promise')
 
 
 
 
-let promise = new MyPromise((resolve, reject) => {
-  resolve('First resolve')
-})
+// let promise = new MyPromise((resolve, reject) => {
+//   resolve('First resolve')
+// })
 
 
-promise.then((res) => {
-  // console.log(res);
-  return new MyPromise((resolve, reject) => {
-    resolve('hjahjahj')
-  })
-}).then((res) => {
-  // console.log(res);
-  return res
-})
+// promise.then((res) => {
+//   // console.log(res);
+//   return new MyPromise((resolve, reject) => {
+//     resolve('hjahjahj')
+//   })
+// }).then((res) => {
+//   // console.log(res);
+//   return res
+// })
 
 
 // let promise2 = promise.then((res) => {
@@ -62,3 +62,20 @@ promise.then((res) => {
 // }, (reason) => {
 //   console.log('exeption'+reason);
 // })
+
+
+
+async function async1() {
+  console.log(1);
+  await new Promise(resolve => {
+    console.log(2);
+  }).then(res => {
+    console.log(3);
+  }).finally(res => {
+    console.log(4);
+  })
+  console.log(5);
+}
+
+async1()
+console.log(6);
