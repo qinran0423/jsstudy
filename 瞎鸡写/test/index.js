@@ -59,6 +59,82 @@
 
 
 
+<<<<<<< HEAD
 // let a = {}
 
 // console.log(a === 1 && a ===2 && a ===3);
+=======
+// Promise.resolve(1)
+// .then(2)
+// .then(Promise.resolve(3))
+// .then(console.log)
+
+
+
+
+var arr = [1,2,3]
+
+
+// function * generator(arr) {
+//   for(let v of arr) {
+//     yield v
+//   }
+// }
+
+// const iterator = generator(arr)
+// console.log(iterator.next());
+
+
+// function  generator(arr) {
+//   let nextIndex = 0
+//   return {
+//     next() {
+//       return nextIndex < arr.length
+//       ? 
+//       {value: arr[nextIndex++], dnoe: false}
+//       :
+//       {value: undefined, done: true}
+//     }
+//   }
+// }
+
+// const iterator = generator(arr)
+// console.log(iterator.next());
+// console.log(iterator.next());
+
+// console.log(iterator.next());
+
+// console.log(iterator.next());
+
+
+const o = {
+  'a': 1,
+  'b': 2,
+  'v': 3,
+  length: 3
+}
+
+
+Object.prototype[Symbol.iterator] = iterator
+
+
+function iterator() {
+  var index = 0;
+  var _this = this;
+
+  return {
+    next() {
+      return index <  _this.length
+      ?
+      {value: _this[index++], done: false}
+      :
+      {value: undefined, done: true}
+    }
+  }
+}
+
+
+for(let v of o){
+  console.log(v);
+}
+>>>>>>> 5ff299dd9083a784a00ec5af9687e72f5d188a55

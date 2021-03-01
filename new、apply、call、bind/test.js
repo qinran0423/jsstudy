@@ -82,3 +82,5 @@ const fn = Test.myBind({
 })
 const newVal = new fn()
 console.log(newVal);
+
+
