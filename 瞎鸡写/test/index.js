@@ -59,11 +59,6 @@
 
 
 
-<<<<<<< HEAD
-// let a = {}
-
-// console.log(a === 1 && a ===2 && a ===3);
-=======
 // Promise.resolve(1)
 // .then(2)
 // .then(Promise.resolve(3))
@@ -137,4 +132,3 @@ function iterator() {
 for(let v of o){
   console.log(v);
 }
->>>>>>> 5ff299dd9083a784a00ec5af9687e72f5d188a55
