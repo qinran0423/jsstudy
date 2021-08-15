@@ -55,21 +55,27 @@
 
 
 // 自记忆函数
-function isPrime(value) {
-  // 创建缓存
-  if (!isPrime.answers) {
-    isPrime.answers = {}
-  }
-  if (isPrime.answers[value] !== undefined) {
-    return isPrime.answers[value]
-  }
+// function isPrime(value) {
+//   // 创建缓存
+//   if (!isPrime.answers) {
+//     isPrime.answers = {}
+//   }
+//   if (isPrime.answers[value] !== undefined) {
+//     return isPrime.answers[value]
+//   }
 
-  var prime = value !== 0 && value !== 1;
-  for (var i = 2; i < value; i++) {
-    if (value % i === 0) {
-      prime = false;
-      break;
-    }
-  }
-  return isPrime.answers[value] = primeß
-}
+//   var prime = value !== 0 && value !== 1;
+//   for (var i = 2; i < value; i++) {
+//     if (value % i === 0) {
+//       prime = false;
+//       break;
+//     }
+//   }
+//   return isPrime.answers[value] = primeß
+// }
+
+// 函数的定义
+// 1. 函数生命 函数表达式
+// 2. 箭头函数
+// 3. 函数构造函数 new Function(‘a’, 'b', 'return a + b')
+// 4. 生成器函数 

@@ -68,7 +68,7 @@ Function.prototype.myBind = function(ctx) {
 
 
 function Test(c) {
-  console.log(this);
+  console.log(c);
   return {
     a: 1,
     b: 2
@@ -76,11 +76,16 @@ function Test(c) {
 }
 
 
-const fn = Test.myBind({
-  a: 1,
-  b: 2
+// const fn = Test.myBind({
+//   a: 1,
+//   b: 2
+// })
+// const newVal = new fn()
+// console.log(newVal);
+const res = Test.bind({
+  a: 3,
+  b: 4
 })
-const newVal = new fn()
-console.log(newVal);
 
 
+new res(1,2)
