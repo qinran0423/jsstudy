@@ -52,3 +52,4 @@ let person = {
 // ]
 
 // console.log(...arr);
+
