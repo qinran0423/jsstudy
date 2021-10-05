@@ -93,12 +93,13 @@
 
 
 
-let p = Promise.reject('foo')
+// let p = Promise.reject('foo')
 
-let p1 = p.then(null, (err) => {
-  return err
-}).then((value) => {
-  console.log(value);
-},  (err) => {
-  console.log(err);
-})
+// let p1 = p.then(null, (err) => {
+//   return err
+// }).then((value) => {
+//   console.log(value);
+// },  (err) => {
+//   console.log(err);
+// })
+
