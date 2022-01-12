@@ -1,81 +1,43 @@
-// const MyPromise = require('./promise')
+// // Promise 执行是同步的   executor 同步的
+// const p =new Promise((resolve, reject) => {
 
+// })
 
+// // 异步
+// p.then((res) => {
 
-
-// let promise = new MyPromise((resolve, reject) => {
-//   resolve('First resolve')
 // })
 
 
-// promise.then((res) => {
-//   // console.log(res);
-//   return new MyPromise((resolve, reject) => {
-//     resolve('hjahjahj')
-//   })
-// }).then((res) => {
-//   // console.log(res);
-//   return res
+// 异步程序
+// const data =  $.ajax({
+//   url: 'http://localhost:3000/data.json',
+//   async: false
 // })
 
-
-// let promise2 = promise.then((res) => {
-// }).then((res) => {
-//   console.log(res);
-// })
-
-              
+// console.log(getNames(data.responseJSON));
+// console.log('I am a crazy guy');
 
 
-// let promise3 = promise.then((res) => {
-// })
-// promise3.then(() => {
-  
-// }) 
-
-// promise.then((value) => {
-//   return value
-// })
-// .then((value) => {
-//   return new Promise((resolve, reject) => {
-//     setTimeout(() => {
-//       reject('Error')
-//     }, 2000);
-//   })
-// })
-// .then((value) => {
-//   console.log(value);
-// }, (reason) => {
-//   console.log('reject:' + reason);
-//   throw new Error('jajajaaj')
-// })
-// .then((value) => {
-//   console.log('resolve1:' + value);
-// },(reason) => {
-//   console.log('reject1:' + reason);
-// })
-// .then((value) => {
-//   throw new Error('Throw Error')
-// })
-// .then((value) => { 
-//   console.log(value);
-// }, (reason) => {
-//   console.log('exeption'+reason);
-// })
-
-
-
-async function async1() {
-  console.log(1);
-  await new Promise(resolve => {
-    console.log(2);
-  }).then(res => {
-    console.log(3);
-  }).finally(res => {
-    console.log(4);
+// promise 的存在  是异步问题同步化的解决方案
+const p = new Promise((resolve, reject) => {
+  $.ajax({
+    url: 'http://localhost:3000/data.json',
+    success(data) {
+      resolve(data)
+    }
   })
-  console.log(5);
-}
+})
 
-async1()
-console.log(6);
+p.then(res => {
+  console.log(getNames(res));
+
+})
+
+console.log('I am a crazy guy');
+
+
+
+function  getNames(data) {
+  return data.map((item) => item.name)
+}
