@@ -78,20 +78,38 @@
 // }, 0);
 
 
-let p1 = Promise.resolve('foo')
+// let p1 = Promise.resolve('foo')
 
-let p2 = p1.finally(
-  () => new Promise((resolve, reject) => {
-    setTimeout(() => {
-      return resolve('baz')
-    }, 100);
-  })
-) 
+// let p2 = p1.finally(
+//   () => new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       return resolve('baz')
+//     }, 100);
+//   })
+// ) 
 
-setTimeout(() => {
-  console.log(p2);
-}, 0);
+// setTimeout(() => {
+//   console.log(p2);
+// }, 0);
 
-setTimeout(() => {
-  console.log(p2);
-}, 200);
+// setTimeout(() => {
+//   console.log(p2);
+// }, 200);
+
+// let p = Promise.resolve()
+// let p1 = Promise.resolve()
+
+// p.then(() => {
+//   console.log('aa');
+// })
+
+// p.then(() => {
+//   console.log('ccc');
+// })
+
+
+// for (let i = 0; i < 5; i++) {
+//   setTimeout(() => {
+//     console.log(i);
+//   }, 0);
+// }

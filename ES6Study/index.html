@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    var t = 0;
+
+    function fun1() {
+      console.log('执行任务1， 耗时0.8s');
+      t += 0.8
+      if (false) { // 不是作用域  
+        var t = new Date() //声明提前
+      }
+    }
+
+    function fun2() {
+      console.log('执行任务2， 耗时0.3s');
+      t += 0.3
+    }
+
+
+    fun1()
+    fun2()
+    console.log(t);
+  </script>
+</body>
+
+</html>

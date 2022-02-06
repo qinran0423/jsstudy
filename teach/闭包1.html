@@ -9,20 +9,20 @@
 </head>
 
 <body>
-  <script type="module">
-    // import Cookies from 'js-cookie'
-
-    // Cookies.set('foo', 'bar')
-
-
-
-    if(true) {
-      var i = 1;
-    } else {
-      var i =2
+  <script>
+    function fn() {
+      var i = 999
+      nAdd = function () {
+        i++
+      }
+      return function () {
+        console.log(i);
+      }
     }
-
-    console.log(i);
+    var getN = fn()
+    getN() // ?
+    nAdd()
+    getN() // ?
   </script>
 </body>
 

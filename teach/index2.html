@@ -9,21 +9,21 @@
 </head>
 
 <body>
-  <script type="module">
-    // import Cookies from 'js-cookie'
 
-    // Cookies.set('foo', 'bar')
-
-
-
-    if(true) {
-      var i = 1;
-    } else {
-      var i =2
+  <script>
+    function mother() {
+      var total = 1000;
+      return function (money) {
+        total -= money
+        console.log(`花了${money}还剩${total}元`)
+      }
     }
-
-    console.log(i);
+    var pay = mother();
+    pay(100);
+    total = 0;
+    pay(100);
   </script>
+
 </body>
 
 </html>
