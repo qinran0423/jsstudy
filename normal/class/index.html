@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script type="module">
+    import Plane from './plane.js'
+    import San from './san.js'
+    var p1 = new Plane(50, 100, 5)
+    console.log(p1);
+    p1.fly()
+    p1.getScore()
+
+
+
+    var s1 = new San(20, 80, '1 life')
+    console.log(s1);
+    s1.fly()
+    s1.getAward()
+  </script>
+  <script>
+    // class本质还是构造函数
+    // 多个对象公用一个属性值的时候 用static
+    // static 保存在构造函数上面的
+    // class Student {
+    //   constructor(sname, sage) {
+    //     this.sname = sname
+    //     this.sage = sage
+    //   }
+    //   static className = "初一2班"
+    //   intr() {
+    //     console.log(`I'm ${this.sname}, I'm ${this.sage}`);
+    //   }
+    // }
+
+
+    // var lilei = new Student('Lilei', 18)
+
+    // lilei.intr()
+  </script>
+</body>
+
+</html>
