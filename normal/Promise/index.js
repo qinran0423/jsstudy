@@ -58,7 +58,7 @@
 
 function double(value, callback) {
   setTimeout(() => {
-    callback(value*2)
+    callback(value * 2)
   }, 1000);
 }
 
