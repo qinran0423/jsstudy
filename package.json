@@ -1,11 +1,18 @@
 {
   "name": "jsstudy",
   "version": "1.0.0",
+  "description": "",
   "main": "index.js",
-  "repository": "git@github.com:qinran0423/jsstudy.git",
-  "author": "qinran0423 <1156107187@qq.com>",
-  "license": "MIT",
-  "devDependencies": {
+  "scripts": {
+    "test": "vitest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
     "js-cookie": "^3.0.1"
+  },
+  "devDependencies": {
+    "vitest": "^0.22.1"
   }
 }
